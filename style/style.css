@@ -19,3 +19,13 @@
 {
 	font-family: 'Roboto';
 }
+
+/* Moviles */
+
+@media screen and (max-width: 480px)
+{
+	.bloque h1
+	{
+		font-size: 22px;
+	}
+}
