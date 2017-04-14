@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Daniel Plaza - Rarex 1</title>
+	<title>Daniel Plaza - Rarex</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/animate.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -12,12 +12,13 @@
 <body>
 	<div class="bloque contacto">
 		<div class="Fcontacto">
+			<p>Enviame tus ideas o cuentame tus proyectos 💡</p>
 			<form action="https://formspree.io/danny.trabajos@gmail.com"
-			      method="POST">
-			      <input type="email" name="_replyto" placeholder="Tu correo">
-			    <textarea name="message" placeholder="Mensaje" cols="30" rows="10"></textarea>
-			    <input type="submit" value="Enviar">
+			      method="POST" id="formContacto">
+			      <input type="email" name="_replyto" placeholder="Tu correo" required="required">
+			    <textarea name="message" placeholder="Mensaje" rows="10" required="required"></textarea>
 			</form>
+			    <button class="enviar" form="formContacto">Enviar</button>
 		</div>
 	</div>
 	<div class="menu roboto">
@@ -25,7 +26,7 @@
 			<li><a href="#" id="Btn_contacto">Contacto</a></li>
 		</ul>
 	</div>
-	<div class="bloque">
+	<div class="bloque" style="padding-bottom:70px; ">
 		<h1 class="roboto animated fadeInUp">Aquí se construirá algo genial...</h1>
 		<h3 class="roboto animated fadeInUp">Solo tienes que ser paciente.</h3>
 	</div>

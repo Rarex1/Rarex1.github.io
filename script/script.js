@@ -1,3 +1,5 @@
+// Activar y ocultar POP-UP
+// Activar POP UP
 $('#Btn_contacto').click(function(event) {
 
 	$(".contacto").css('display', 'flex')
@@ -5,13 +7,14 @@ $('#Btn_contacto').click(function(event) {
 	.fadeIn();
 
 });
+// Ocultar POP-UP con tecla escape
 $(document).keyup(function(e) {
 	if(e.keyCode == 27)
 	{
 		$('.contacto').fadeOut();
 	}
 });
-
+// Ocultar POP-UP con click en el fondo negro
 $('#Btn_contacto').click(function() {
     var span = $(this);
 

@@ -1,5 +1,8 @@
+/* Importaciones */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* Etiquetas */
 *
 {
 	margin: 0;
@@ -17,6 +20,8 @@ a
 	text-decoration: none;
 	color:  black;
 }
+
+/* Clases */
 
 .bloque
 {
@@ -55,27 +60,177 @@ a
 .Fcontacto
 {
 	background-color: white;
-	width: 50%;
-	padding: 50px 0 50px 0;
+	width: 40%;
+	padding: 40px 0 30px 0;
 	border-radius: 5px;
 	position: fixed;
 	z-index: 20;
-	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;	
+}
+.Fcontacto p
+{
+	font-family: Roboto;
+	font-size: 15px;
+	padding-bottom: 10px;
+	color: gray;
 }
 .Fcontacto form
 {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 10px;
 }
+
+.Fcontacto form input[type="email"]
+{
+	width: 60%;
+	padding: 5px;
+	margin: 10px 0 10px 0;
+	font-family: Roboto;
+}
+.Fcontacto form textarea
+{
+	width: 60%;
+	padding: 5px;
+	margin: 10px 0 10px 0;
+	font-family: Roboto;
+	resize: none;
+}
+
+.enviar
+{
+	/* Tamaños */
+	width: 20%;
+	height: 30px;
+	/* Que no tenga bordes (porque son feos :c los por defecto) */
+	border: none;
+	/* Se le quita el fondo para que solo se vea el : after */
+	background-color: rgba(0, 0, 0, 0);
+	/* Estilos de fuente */
+	font-family: Roboto;
+	color:  white;
+	font-size: 15px;
+	/* Para que no se vea la parte del otro color del : after */
+	overflow: hidden;
+	/* Para poder manipular correctamente los valores del : after al hacerlo relativo */
+	position: relative;
+}
+.enviar:after
+{
+	/* Tiene que tener declarado el contenido para ver el after */
+	content: "";
+	/* Para manipular con relacion al boton */
+	position: absolute;
+	/* Colores del boton y after */
+	background: linear-gradient(90deg,#97ED8A 0%, #97ED8A 50%,#45BF55 50%, #45BF55 100%);
+	/* Tamaños (Es el doble del ancho que el boton ya que tambien contempla la parte del boton) */
+	width: 200%;
+	height: 30px;
+	/* Para que se vea la parte del color original del boton */
+	left: -100%;
+	/* Para alinear el after */
+	top: 0;
+	/* Para que el texto del boton este sobre el after */
+	z-index: -1;
+
+	/* Efectos de transicion */
+	transition: all, ease, 1s;
+	-webkit-transition: all, ease, 1s;
+	-moz-transition: all, ease, 1s;
+	-o-transition: all, ease, 1s;
+}
+.enviar:hover:after
+{
+	left: 0%;
+}
+
 
 /* Moviles */
 
+
+/* Menores a 480 pixeles de ancho en pantalla */
 @media screen and (max-width: 480px)
 {
 	.bloque h1
 	{
 		font-size: 22px;
+	}
+
+	.Fcontacto
+	{
+		background-color: white;
+		width: 100%;
+		padding: 50px 0 50px 0;
+		border-radius: 5px;
+		position: fixed;
+		z-index: 20;
+		
+	}
+	.Fcontacto form
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.Fcontacto form input[type="email"]
+	{
+		width: 70%;
+		padding: 5px;
+		margin: 10px 0 10px 0;
+		font-family: Roboto;
+	}
+	.Fcontacto form textarea
+	{
+		width: 70%;
+		padding: 5px;
+		margin: 10px 0 10px 0;
+		font-family: Roboto;
+		resize: none;
+	}
+
+		.enviar
+	{
+		/* Comentarios atributo por atributo mas arriba */
+
+		width: 20%;
+		height: 30px;
+		border: none;
+		background-color: rgba(0, 0, 0, 0);
+		font-family: Roboto;
+		color:  white;
+		font-size: 15px;
+		overflow: hidden;
+		position: relative;
+	}
+	.enviar:after
+	{
+		/* Comentarios atributo por atributo mas arriba */
+
+		content: "";
+		position: absolute;
+		background: linear-gradient(90deg,#97ED8A 0%, #97ED8A 50%,#45BF55 50%, #45BF55 100%);
+		width: 200%;
+		height: 30px;
+		left: -100%;
+		top: 0;
+		z-index: -1;
+
+		/* Efectos de transicion */
+		transition: all, ease, 1s;
+		-webkit-transition: all, ease, 1s;
+		-moz-transition: all, ease, 1s;
+		-o-transition: all, ease, 1s;
+	}
+	.enviar:hover:after
+	{
+		left: 0%;
 	}
 }
