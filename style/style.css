@@ -31,6 +31,7 @@ a
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
 }
 .roboto
 {
@@ -60,7 +61,7 @@ a
 .Fcontacto
 {
 	background-color: white;
-	width: 40%;
+	width: 60%;
 	padding: 40px 0 30px 0;
 	border-radius: 5px;
 	position: fixed;
@@ -149,10 +150,35 @@ a
 {
 	left: 0%;
 }
+/* ------------------------------------------------- */
 
+.instaLogo
+{
+	height: 30px;
+	position: absolute;
+	bottom: 40px;
+}
+.instaLogo img
+{
+	height: 30px;
+}
 
 /* Moviles */
 
+/* Menores a 768 pixeles de ancho en pantalla */
+@media screen and (max-width: 768px)
+{
+	.Fcontacto
+	{
+		background-color: white;
+		width: 80%;
+		padding: 50px 0 50px 0;
+		border-radius: 5px;
+		position: fixed;
+		z-index: 20;
+		
+	}
+}
 
 /* Menores a 480 pixeles de ancho en pantalla */
 @media screen and (max-width: 480px)
