@@ -20,7 +20,23 @@ a
 	text-decoration: none;
 	color:  black;
 }
-
+footer
+{
+	width: 100%;
+	height: 130px;
+	background-color: black;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer p
+{
+	color: white;
+	position: absolute;
+	bottom: 10px;
+	font-family: Roboto;
+}
 /* Clases */
 
 .bloque
@@ -173,13 +189,104 @@ a
 {
 	height: 30px;
 	position: absolute;
-	bottom: 40px;
 }
 .instaLogo img
 {
 	height: 30px;
 }
 
+.foto
+{
+	border: solid 10px white;
+	height: 330px;
+	width: 330px;
+	background-color: gray;
+	border-radius: 50%;
+	position: absolute;
+}
+.foto img
+{
+	position: absolute;
+}
+
+.bloqueDos
+{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+.bloqueDos .desc
+{
+	height: 50%;
+	width: 50%;
+	font-family: Roboto;
+	font-size: 20px;
+	color: grey;
+	overflow-y: scroll;
+}
+.bloqueDos .fotoDos
+{
+	height: 85%;
+	width: 30%;
+}
+
+.flecha
+{
+	position: absolute;
+	bottom: 40px;
+	left: calc(50% - 20px);
+	margin-left: auto;
+	margin-right: auto;
+	animation: flotan2;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-delay: 7s;
+}
+.flecha:before, .flecha:after
+{
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 3px;
+	background-color: white;
+	top: 0;
+	left: 0;
+}
+.flecha:before
+{
+	transform: rotate(45deg) translateX(-23%);
+	transform-origin: top left;
+}
+.flecha:after
+{
+	transform: rotate(-45deg) translateX(23%);
+	transform-origin: top right;
+}
+
+@keyframes flotan2
+{
+	0% {bottom: 40px;}
+
+	50% {bottom: 25px;}
+
+	100% {bottom: 40px;}
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: rgba(0, 0, 0, .0);
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0, 0, 0, .8);
+	border-radius: 5px;
+}
 /* Moviles */
 
 /* Menores a 768 pixeles de ancho en pantalla */
