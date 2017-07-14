@@ -54,13 +54,29 @@ $( document ).on( "mousemove", function( event ) {
   Ytratado =  (largo - Y)*(1/50);
 });
 mover();
-// Pruebas con clima
-$.ajax({
-url: "http://api.wunderground.com/api/207e3e829b8f1a1c/conditions/q/autoip.json",
-type: "POST",
-dataType: "JSON",
-success: function(data)
-	{
-	  console.log(data);
-	}
+// Eventos con scroll
+var posPantalla;//largo de la pantalla hasta donde se ve
+    
+
+//Se añade el evento scroll y load a window
+var fotoDosActivado = false;
+$(window).on('scroll load', function()
+{
+  posPantalla = $(window).scrollTop()+$(window).height();
+  posBloqueDos = $('.bloqueDos').offset().top + $('.bloqueDos').outerHeight()/2;
+  // console.log(posBloqueDos);
+  // console.log(posPantalla);
+  if(posPantalla > posBloqueDos)
+  {
+    anchoTexto = $('.desc').width();
+    $('.fotoDos img').css('right', anchoTexto+100+'px');
+    fotoDosActivado = true;
+  }
+});
+$(window).on('resize',function(event) {
+  if (fotoDosActivado) 
+  {
+    anchoTexto = $('.desc').width();
+    $('.fotoDos img').css('right', anchoTexto+100+'px');  
+  }
 });
