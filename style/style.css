@@ -1,6 +1,7 @@
 /* Importaciones */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
 
 /* Etiquetas */
 *
@@ -8,6 +9,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 
 ul li
@@ -131,10 +133,28 @@ footer p
 	height: 130vh;
 	width: 130%;
 	position: absolute;
-	background-image: url('../image/fondo.jpg');
+	background-image: url('../image/1137.jpg');
 	background-repeat: none;
 	background-size: cover;
 	z-index: -1;
+	filter: grayscale(100%) brightness(.30);
+}
+.bloque span
+{
+	position: absolute;
+	bottom: 55%;
+	font-size: 80px;
+	font-family: "Roboto";
+	font-weight: bold;
+	color: white;
+}
+.bloque .sub
+{
+	font-family: "Zilla Slab";
+	color: white;
+	font-size: 20px;
+	bottom: 50%;
+	position: absolute;
 }
 
 .enviar
@@ -198,12 +218,13 @@ footer p
 .foto
 {
 	/* border: solid 10px lightgray; */
-	height: 300px;
-	width: 300px;
+	height: 150px;
+	width: 150px;
 	background-color: gray;
 	border-radius: 50%;
 	position: absolute;
 	overflow: hidden;
+	bottom: 15%;
 }
 .foto img
 {
@@ -220,6 +241,7 @@ footer p
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: row;
+	background-color: #FF822E;
 }
 .bloqueDos .desc
 {
@@ -227,7 +249,7 @@ footer p
 	width: 50%;
 	font-family: Roboto;
 	font-size: 20px;
-	color: grey;
+	color: lightgray;
 	overflow-y: scroll;
 	margin-right: 50px;
 }
@@ -243,7 +265,68 @@ footer p
 	right: 210vh;
 	transition: 1.5s ease;
 }
-
+/*---------------------------------------------*/
+.bloqueTres
+{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	position: relative;
+}
+.bloqueTres .tec span
+{
+	font-size: 30px;
+	font-weight: bold;
+	color: lightgray;
+	width: 90%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.bloqueTres .tec
+{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: Roboto;
+	background-color: #45BF55;
+}
+.bloqueTres .tec .botones
+{
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.bloqueTres .tec .botones .boton
+{
+	height: 50px;
+	width: 100px;	
+	border-radius: 5px;
+	border: solid 1px lightgray;
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: lightgray;
+	transition: .5s ease;
+}
+.bloqueTres .tec .botones .boton:hover
+{
+	background-color: lightsalmon;
+	font-weight: bold;
+	color: white;
+}
+.bloqueTres video
+{
+	width: 50%;
+	position: absolute;
+	right: 0px;
+}
 .flecha
 {
 	position: absolute;
@@ -258,6 +341,7 @@ footer p
 	animation-play-state: running;
 	animation-delay: 7s;
 }
+/*--------------------------------------------*/
 .flecha:before, .flecha:after
 {
 	content: "";
